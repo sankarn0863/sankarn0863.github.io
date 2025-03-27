@@ -1,416 +1,269 @@
-
 <!DOCTYPE html>
-<!-- saved from url=(0060)file:///C:/Users/theco/OneDrive/Desktop/Portfolio/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="icon" href="v1.png" type="image/png">
-<link rel="image_src" href="dp.jpg">
-  <meta name="description" content="Hi, this is Venu Naredla">
-  <meta name="keywords" content="HTML,CSS">
-  <meta name="author" content="Sankar N">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>My Portfolio</title>
-<style>
-.ven1{
-  font-size: larger;
-}
-.v1{
-  color: black;
-}
-.v2{
-  color: rgb(6, 255, 234);
-  font-size: 15px;
-}
-.ven1{
-color: white
-}
+<html lang="en">
 
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-.flip-box {
-  background-color: transparent;
-  width: 322px;
-  height: 382px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-box-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-box-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* Style the back side */
-.flip-box-back {
-  background-color: rgb(17, 17, 17);
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.sai{
-  color: azure;
-  font-size: 20px;
-  font-style: bold;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    <!--= Google Fonts =-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
 
-</style></head>
+    <!--= Remixicons=-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--= SwiperJS CSS =-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+    <!--= Main CSS =-->
+    <link rel="stylesheet" href="main.css">
+
+</head>
 
 <body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container" style="background-color: rgb(5 5 5);">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="index.html#hero">
-            <h1><span>SN</span>portfolio</h1>
-          </a>
+
+    <!--= Header =-->
+    <header id="header" class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="nav__brand">
+                    <i class="ri-code-s-slash-line"></i>Developer
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#hero" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">Qualification</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav__toggle">
+                    <i id="nav-toggle" class="ri-menu-3-line"></i>
+                </div>
+            </nav>
         </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
-            <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#services" data-after="About">Skills</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
-            <li><a href="https://github.com/sankarn0863"><i class="fa fa-github" style="font-size:20px"></i>&nbsp;GitHub </a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Header -->
-
-
-  <!-- Hero Section  -->
-  <section id="hero">
-    <div class="hero container">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Sankar N <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End Hero Section  -->
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="projects container">
-      <div class="projects-header">
-        <h1 class="section-title">Professional<span>Experience</span></h1>
-      </div>
-      <div class="all-projects">
-
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Best Buy, MN</h1>
-            <p class="ven1">Full Stack Developer</p>
-              <p>Created databases and servers that are resistant to outages and work endlessly. 
-                Ensuring cross-platform compatibility by creating applications that work on different platforms. 
-                Based on the type of application the developer is responsible for the creation of API.
-                Work with Analyst, QA and dev team to perform gap analysis during initial development phase.
-	              Leveraged Spring Boot and Spring Integration to build micro services, consuming both REST/ SOAP/ Mainframe services through APIGEE. 
-              </p><p><a class="v2">Tools&amp;Tech</a></p>
-              <p>HTML5, CSS3, AngularJS, React.js, Groovy, AJAX, Responsive Web Design, JQuery UI, JSON, Restful web services, Spring, JavaScript, JSP, Agile methodology, Maven, Jenkins, GIT, Junit, Eclipse and Windows.
-                </p>
-           </div>
-         </div>
-
-           <div class="project-item">
-            <div class="project-info">
-              <h1>Ford Motors, MI</h1>
-              <p class="ven1">Jr Full Stack Developer</p>
-                <p>Created databases and servers that are resistant to outages and work endlessly. 
-                  Ensuring cross-platform compatibility by creating applications that work on different platforms. 
-                  Based on the type of application the developer is responsible for the creation of API.
-                  Work with Analyst, QA and dev team to perform gap analysis during initial development phase.
-                  Leveraged Spring Boot and Spring Integration to build micro services, consuming both REST/ SOAP/ Mainframe services through APIGEE. 
-                </p><p><a class="v2">Tools&amp;Tech</a></p>
-                <p>HTML5, CSS3, AngularJS, React.js, Groovy, AJAX, Responsive Web Design, JQuery UI, JSON, Restful web services, Spring, JavaScript, JSP, Agile methodology, Maven, Jenkins, GIT, Junit, Eclipse and Windows.
-                  </p>
-             </div>
-
-             </div>
-
-
-           <div class="project-item">
-            <div class="project-info">
-              <h1>SUNY New Paltz, NY</h1>
-              <p class="ven1">Grad Full Stack Developer</p>
-              <p>	
-                Developed a web-based application (that tracks all the health stats and fitness) which operates on both the
-                client and server side, Rest API is implemented using the Node.js and Express and Front-end is developed with
-                Vue.js and axios (Bulma framework is additionally used). Postman is used for the API operations and Heroku is
-                the server in which we deployed the bundle. 
-                 </p>
-                <p></p><p><a class="v2">Tools&amp;Tech</a></p>
-                <p>
-                  Java 8, Sprint Boot, Spring MVC, SQL Server, JOOQ, JAXB, Nginx, Postman, TeamCity, Jetty Server, Gradle, CSS, AngularJS, IntelliJ, MacOS, JUnit, paired programming, shell script, Agile, Cloud Foundry.
-                </p>
+    </header>
+    <!--= main =-->
+    <main class="main">
+        <!--= Hero =-->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="d-grid hero__wrapper">
+                    <div class="hero__content">
+                        <h1 class="hero__title">Hi, I am Sankar,<br>Software Developer.</h1>
+                        <p class="hero__description">Hello! I'm Sankar Naredla, a full stack developer based in
+                            the United States. I'm very passionate about creating Performant and Lightweight web applications.</p>
+                        <div class="hero__info">
+                            <div class="hero__info-wrapper">
+                                <p class="hero__info-number">06</p>
+                                <h2 class="hero__info-title">Years<br>Experience</h2>
+                            </div>
+                            <div class="hero__info-wrapper">
+                                <p class="hero__info-number">20+</p>
+                                <h2 class="hero__info-title">Projects<br>Completed</h2>
+                            </div>
+                            <div class="hero__info-wrapper">
+                                <p class="hero__info-number">03+</p>
+                                <h2 class="hero__info-title">Companies<br> Worked</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="portfolio.png" alt="Dave" class="hero__img">
+                </div>
             </div>
-          </div>
+        </section>
 
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Yamaha Corporation</h1>
-            <p class="ven1">Java/J2EE Developer</p>
-              <p>Developed the project in Agile Scrum methodology that included iterative application development,
-                weekly Sprints and stand up meetings.
-                 Developed User- Interface using Servlets, JSP, JavaScript, Angular JS and XML
-                Used bootstrap and AngularJS for responsive web design.
-                 Used spring framework's JMS support for writing to JMS Queue, Hibernate Dao Support for
-                interfacing with the database and integrated spring with JSF.
-                 Implemented User Authentication based on validation function in Spring MVC framework to validate
-                the input data from client side
-                </p><p><a class="v2">Tools&amp;Tech</a></p><p>Java, J2EE, JDK, AngularJS, HTML, CSS, Bootstrap, MongoDB (NoSQL Database) JSF, Jenkins, SpringJDBC, Spring-WS-core, Spring, Hibernate, Maven, JSF, Log4J and Junit, Eclipse, SQL Navigator, JSP, Oracle,
-                  Subversion.
-                  
-                </p>
-           </div>
-           </div>
-           <div class="project-item">
-            <div class="project-info">
-              <h1>Blue scope steel</h1>
-              <p class="ven1">Intern Full Stack Developer</p>
-              <p>Built a web-based system on a traditional server, A (full-stack) website which has forms connecting to a MySQL database. 
-                </p><p>Web services with different data formats and locations with single and multiple parameters.</p>
-                 <p>Finally, this project is deployed into Wyvren, Fort rabbit and Mendix.</p>
-                 <p></p><p><a class="v2">Tools&amp;Tech</a></p>
-                <p>Java, J2EE, JDK, AngularJS, HTML, CSS, Bootstrap, MongoDB (NoSQL Database), JSF, Jenkins, SpringJDBC, Spring-WS-core, Spring, Hibernate, Maven, JSF, Log4J and Junit, Eclipse, SQL Navigator, JSP, Oracle 10.</p>
+        <!--= About =-->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">Who am I</span>
+                </div>
+                <div class="d-grid about__wrapper">
+                    <div class="about__content">
+                        <h3 class="about__title">I'm a Professional and Experienced Full stack Developer.</h3>
+                        <p class="about__description">Hello! I'm Sankar Naredla, a senior software application engineer based in
+                            the United States. I'm very passionate about creating Performant and Lightweight web applications.</p>
+                        <a href="#" class="btn btn--primary">Know More !</a>
+                    </div>
+                    <div class="skills">
+                        <h3 class="skills__title">Technologies :</h3>
+                        <div class="skills__wrapper">
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Backend</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Java</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Groovy</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Elastic search</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        NoSQL</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        MySQL</li>
+                                </ul>
+                            </div>
+                            <div class="skills__content">
+                                <h4 class="skills__subtitle">Frontend</h4>
+                                <ul class="skills__list">
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        HTML</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        CSS</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        JavaScript</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        Bootstrap</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill"></i>
+                                        React</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Projects Section -->
-  <section id="about">
-    <div class="about container">
-      <div class="col-left">
-        <div class="about-img">
-          <div class="flip-box">
-            <div class="flip-box-inner">
-              <div class="flip-box-front">
-                <img src="./My Portfolio_files/dp.jpg" alt="img">
-              </div>
-              <div class="flip-box-back">
-                <p>Name: Sankar N</p>
-                <p>Gender: Male</p>
-                <p>Racial Category: Asian</p>
-                <p>Nationality: Indian</p>
-                <p>Current Residence: United States</p>
-                <p>Future Sponcership: Required</p>
-                <p>Current State: Georgia</p>
-                <p>Relocation: Yes, anywhere around United States</p>
-              </div>
+        </section>
+
+        <!--= Qualification =-->
+        <section id="qualification" class="section qualification">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Qualification</h2>
+                    <span class="section__subtitle">Experience & Education</span>
+                </div>
+                <!--= Professional Experience =-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-briefcase-fill"></i>
+                        Professional Experience
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!--= Experience 6 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Senior Software Engineer II</h3>
+                            <p class="qualification__description"> Senior Software Engineer II in the API CoE team, responsible for leading the design, development, and deployment of software applications that support business and insurance operations.
+                            </p>
+                            <span class="qualification__date">2025 - Current</span>
+                        </div>
+                        <!--= Experience 5 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Senior Software Engineer</h3>
+                            <p class="qualification__description"> Senior software engineer in API COE team worked on creating software solutions for end users using engineering principles and programming languages.
+                            </p>
+                            <span class="qualification__date">2023 - 2024</span>
+                        </div>
+                        <!--= Experience 4 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Software Engineer</h3>
+                            <p class="qualification__description"> XP & cloud native developer worked on developing, enhancing and maintaining web services for external users and providing solutions for business problems.
+                            </p>
+                            <span class="qualification__date">2022 - 2023</span>
+                        </div>
+                        <!--= Experience 3 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Associate Software Engineer</h3>
+                            <p class="qualification__description"> Enterprise Web and Java developer worked on EMS using Spring boot 2.
+                            </p>
+                            <span class="qualification__date">2020 - 2021</span>
+                        </div>
+                        <!--= Experience 2 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Frontend Web Developer</h3>
+                            <p class="qualification__description"> Developed web applications using Vue framework with unit/component testing.
+                            </p>
+                            <span class="qualification__date">2018 - 2019</span>
+                        </div>
+                        <!--= Experience 1 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Web Development Intern</h3>
+                            <p class="qualification__description"> Worked on Enterprise Web development with Html, CSS and JS.</p>
+                            <span class="qualification__date">2017 - 2018</span>
+                        </div>
+                    </div>
+                </div>
+                <!--= Education =-->
+                <div class="qualification__wrapper">
+                    <h3 class="qualification__name">
+                        <i class="ri-booklet-fill"></i>
+                        Education
+                    </h3>
+                    <div class="d-grid qualification__content">
+                        <!--= Education 2 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Master In Computer Science</h3>
+                            <p class="qualification__description"> State University of New York </p>
+                        </div>
+                        <!--= Education 1 =-->
+                        <div class="qualification__item">
+                            <h3 class="qualification__title">Bachelor In Computer Science</h3>
+                            <p class="qualification__description"> JNTUK in Andhra Pradesh </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="qualification__footer">
+                    <p class="qualification__footer-text">See my full resume</p>
+                    <a href="#" class="btn btn--primary">Todo!</a>
+                </div>
             </div>
-          </div>
+        </section>
+
+        <!--======= Contact =======-->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="d-grid contact__wrapper">
+                    <div class="contact__content">
+                        <h2 class="contact__title">Contact Me..?!</h2>
+                        <p class="contact__description">
+                            Have any questions? Reach out to me via LinkedIn.
+                        </p>
+                    </div>
+                    <div class="contact__btn">
+                        <a href="https://www.linkedin.com/in/sankar-n0863/" class="btn btn--secondary">Get in touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--======== footer =====-->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="d-grid footer__wrapper">
+                <div class="footer__content">
+                    <h4 class="footer__title">Email Me</h4>
+                    <a href="#" class="footer__contact">sankar.n0863@gmail.com</a>
+                </div>
+                <div class="footer__content">
+                    <h4 class="footer__title">Call Me</h4>
+                    <a href="#" class="footer__contact">+1 845 857 ####</a>
+                </div>
+                <div class="footer__content">
+                    <h4 class="footer__title">Location</h4>
+                    <a href="#" class="footer__contact">Cincinnati, Ohio</a>
+                </div>
+            </div>
+            <p class="footer__copyright">Designed by Sankar Naredla</p>
         </div>
-      </div>
+    </footer>
 
-      <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <p class="sai">Java Full Stack Developer</p>
-        <p>	Proficient in all stages of software development life cycle (SDLC) project management, requirements gathering, analysis, design, development, integration, maintenance, installation, and testing. 
-          Proficient in client-side scripting languages and server-side scripting languages, such as JavaScript, jQuery, JSON, Vue.JS.  
-          
-          </p><p>I'm a well-organized and result-oriented with around 7 years experience in Java Full Stack development along with 6 complete years of real time exposure on developing software applications.</p>
-<h2 class="ven1">Technical Skills</h2>
-<p>HTML5 | CSS3 | Javascript | Java | PHP | IDE | DBMS</p>
-        <a href="resume_sankar.pdf" class="cta">Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <!-- End About Section -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Service Section -->
-    <section id="services">
-      <div class="services container">
-        <div class="service-top">
-          <h1 class="section-title">Sk<span>i</span>lls</h1>
-          <p>I'm specialized and engaged in the development of WWW applications using a client-server model. 
-            	Around 7 years of professional experience in analysis, design, development and testing of web and distributed n-tier applications using Java, J2EE technologies &amp; Web technologies.</p>
-        </div>
-        <div class="service-bottom">
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/code.png"></div>
-            <h2>Web Tech</h2>
-            <p>HTMLX|CSSX|AJAX|DOM|J2EE</p>
-            <p>Bootstrap|Javascript|JSON</p>
-            <p>jQuery|CGI|PHP|Spring|Hibernate </p>
-            <p>Spring Boot|MySQL|NoSQL</p>
-          </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/web-design.png"></div>
-            <h2>Tools</h2>
-            <p>Maven|Subversion|Jenkins</p>
-            <p>Bueft|Vuetify</p>
-            <p>Putty|WinSCP</p>
-            <p>BULMA Framwork</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/laptop-coding.png"></div>
-            <h2>IDE & Editors</h2>
-            <p>VS-Code|Brackets|WebStorm</p>
-            <p>Notepad++|Eclipse|IntelliJ</p>
-            <p>WinSCP|Net Beans|Atom</p>
-            <p>Sublime text</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/96/000000/control-panel.png"/></div>
-            <h2>Version Control</h2>
-            <p>GIT-HUB</p>
-            <p>GIT-Kraken</p>
-            <p>Clear case</p>
-            <p>Subversion</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/window-settings.png"></div>
-            <h2>JS Libraries</h2>
-            <p>Vue.js|Angular.js 2.0|Angular.js 7.0</p>
-            <p>React.js|jQuery|Node.js</p>
-            <p>Express|Axios</p>
-            <p>Bootstrap.js</p>
-          </div>
-          
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/96/000000/networking-manager.png"/></div>
-            <h2>Web Services</h2>
-            <p>SaaS|PaaS|IaaS</p>
-            <p>Rest|Soap|WSDL</p>
-            <p>JAX-WS|Apache AXIS2</p>
-            <p>JMS|MQ Series</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/96/000000/sync-settings.png"/></div>
-            <h2>SDLC</h2>
-            <p>Agile(Scrum)</p>
-            <p>Rapid Application Development</p>
-            <p>TestDriven Application Development</p>
-            <p>Waterfall Model</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/48/000000/cloud-database.png"/></div>
-            <h2>Databases</h2>
-            <p>Oracle 10</p>
-            <p>PL/SQL</p>
-            <p>MySQL</p>
-            <p>NoSQL</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/operating-system.png"></div>
-            <h2>Operating Systems</h2>
-            <p>Windows XP/Vista/7/8/10</p>
-            <p>Ubuntu</p>
-            <p>Mac OS</p>
-            <p>Kali Linux</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/96/000000/thin-client.png"/></div>
-            <h2>App/Web servers</h2>
-            <p>Oracle Web Logic Server</p>
-            <p>Amazon Web Server</p>
-            <p>Fortrabbit</p>
-            <p>Mendix</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="https://img.icons8.com/fluency/96/000000/administrative-tools.png"/></div>
-            <h2>Other Tools</h2>
-            <p>JUnit|JMeter</p>
-            <p>MS Office</p>
-            <p>Chrome Developer Tools</p>
-            <p>JIRA|Firebug</p>
-          </div>
-
-          <div class="service-item">
-            <div class="icon"><img src="./My Portfolio_files/office.png"></div>
-            <h2>Work</h2>
-            <p>Program Evaluation</p>
-            <p>Resource Allocation</p>
-            <p>Multitasking</p>
-            <p>Organizational Behaviour</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="contact container">
-      <div>
-        <h1 class="section-title">Contact <span>info</span></h1>
-      </div>
-      <h1>&nbsp;</h1>
-      <h1>&nbsp;</h1>
-      <div class="contact-items">
-        <div class="contact-item">
-          <a href="tel:+18458575206">
-          <div class="icon"><img src="./My Portfolio_files/iphone-x.png"></div>
-          <div class="contact-info">
-            <h1 class="v1">Phone</h1>
-            <h2 class="v1">+1 845 219 1948</h2>
-          </div>
-        </a>
-        </div>
-        <div class="contact-item">
-          <a href="mailto:%20naredla96@gmail.com">
-          <div class="icon"><img src="./My Portfolio_files/mail.png"></div>
-           <div class="contact-info">
-            <h1 class="v1">Email</h1>
-            <h2 class="v1">sankar.n0863@gmail.com</h2>
-          </div>
-        </a>
-        </div>
-        <div class="contact-item">
-          <a href="https://www.google.com/maps/place/31+Millrock+Rd,+New+Paltz,+NY+12561/@41.7489112,-74.0802312,17z/data=!3m1!4b1!4m5!3m4!1s0x89dd18801121690f:0x327f66f247c9eb!8m2!3d41.7489112!4d-74.0780425">
-          <div class="icon"><img src="./My Portfolio_files/location-update.png"></div>
-          <div class="contact-info">
-            <h1 class="v1">ADDRESS</h1>
-            <h2 class="v1">2958 Greyhawk Ln, CUMMING, GA-30040, United States</h2>
-        </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <p style="text-align: right;">Designed by Sankar Naredla</p>
-  <!-- End Contact Section -->
-
-  <!-- End Footer -->
-  <script src="app.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
